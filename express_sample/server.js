@@ -35,11 +35,9 @@ app.get('/profile', (req, res) => {
 
 // POSTリクエスト
 app.post('/auth', (req, res) => {
-    console.log(req.body)
-    // var loginName = req.body.login_name
-    // var password = req.body.password
-
-    // console.log(loginName, password)
+    var loginName = req.body.login_name
+    var password = req.body.password
+    console.log(loginName, password)
 
     res.send('認証処理')
 })
