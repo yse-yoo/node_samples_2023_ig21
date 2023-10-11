@@ -39,7 +39,12 @@ app.post('/auth', (req, res) => {
     var password = req.body.password
     console.log(loginName, password)
 
-    res.send('認証処理')
+    var message = "ログイン失敗"
+    if (loginName == process.env.LOGIN_NAME
+        && password == process.env.PASSWORD) {
+            message = "ログイン成功"
+    }
+    res.send(message)
 })
 
 //　サーバ停止: 起動中のターミナルで Ctrl + C
