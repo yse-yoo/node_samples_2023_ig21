@@ -51,15 +51,14 @@ router.get('/item/:id', (req, res) => {
     // TODO: case2 APIサーバを利用する
     // itemモデルを使って IDで商品データを取得
     var selectItem = item.find(id)
-    // var data = {
-    //     title: "商品詳細",
-    //     item: selectItem,
-    // }
-    // views/item/detail.ejs にデータを渡して表示
-    // res.render('item/detail', data)
-
-    res.render('item/detail', { title: "商品詳細", item: selectItem } )
+    var data = {
+        title: "商品詳細",
+        item: selectItem,
     }
+    // views/item/detail.ejs にデータを渡して表示
+    res.render('item/detail', data)
+
+    // res.render('item/detail', { title: "商品詳細", item: selectItem } )
 })
 
 // POSTリクエスト
