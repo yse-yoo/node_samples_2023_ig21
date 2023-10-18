@@ -16,6 +16,16 @@
     <dl>
         <dt>氏名</dt>
         <dd><%= user.name %></dd>
+        <dt>出身地</dt>
+        <dd><%= user.birthplace %></dd>
+        <dt>趣味</dt>
+        <dd>
+            <ul>
+            <% user.hobby.forEach((value) => { %>
+                <li><%= value %></li>
+            <% }) %>
+            </ul>
+        </dd>
     </dl>
 </body>
 </html>
