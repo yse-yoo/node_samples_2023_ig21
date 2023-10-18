@@ -15,10 +15,10 @@
         <!-- items 繰り返し表示 -->
         <% items.forEach((item) => { %>
         <tr>
-            <td><%= item.name %></td>
+            <td><a href="/item/<%= item.id %>"><%= item.name %></a></td>
             <td>\<%= item.price %></td>
         </tr>
-        <% }) %> 
+        <% }) %>
     </table>
 </body>
 </html>
