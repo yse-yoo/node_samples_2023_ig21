@@ -63,5 +63,5 @@ res.render('index', data)
 - Viewを表示するためのパッケージ
 
 ```
-npm i ejs
+npm i express-ejs-layouts
 ```
