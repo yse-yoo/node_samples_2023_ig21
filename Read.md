@@ -1,36 +1,57 @@
-## Node.jsの基本
-1. プロジェクトフォルダ作成
-
-例）
-express_sample
-
-2. プロジェクトフォルダを「VSCode」で開く
-
-3. VSCodeのターミナルを開く
-
-### 初期化
-```shell
-npm init -y
+## Node.jsプロジェクト初期化
+```
+npm init -y 
 ```
 
-### パッケージインストール
-```shell
-npm i パッケージ名
+- package.jsonが作成
+
+## インストール
+```
+npm i express dotenv nodemon fs
 ```
 
-#### 例
-```shell
-npm i express dotenv
+## スクリプト設定
+package.json
+
 ```
-### Node.jsサーバの作成と起動
-1. サーバプログラム「server.js」
+...
+scripts {
+    "dev": "nodemon server",
+    ...
+}
+...
+```
 
-プログラムはGitHub参照
+## サーバ起動
+```
+npm run dev
+```
 
-2. 
+## EJS
+### インストール
+```
+npm i ejs
+```
 
-```shell
-npm i パッケージ名
+### View（EJS テンプレート）
+- viewsフォルダに .ejs ファイルを作成
+
+### 表示
+##### views/index.ejs
+```
+res.render('index')
+```
+
+##### views/profile.ejs
+- Viewにデータを渡す
+```
+res.render('index', data)
+```
+
+## レイアウト
+### インストール
+```
+npm i express-ejs-layouts
 ```
 
 ## npxコマンドでエラーになる場合
