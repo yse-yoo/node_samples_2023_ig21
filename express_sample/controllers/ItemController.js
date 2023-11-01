@@ -21,8 +21,9 @@ exports.index = (req, res) => {
  */
 exports.detail = (req, res) => {
     const id = req.params.id
-    // TODO: case1 RDBMS を利用する
-    // TODO: case2 APIサーバを利用する
+    //Itemインスタンスを生成
+    const item = new Item()
+    //IDで商品を取得
     var selectItem = item.find(id)
     var data = {
         title: "商品詳細",
