@@ -29,5 +29,6 @@ exports.detail = (req, res) => {
         title: "商品詳細",
         item: selectItem,
     }
+    // views/item/detail.ejs を表示
     res.render('item/detail', data)
 }
