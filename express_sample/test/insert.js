@@ -6,4 +6,6 @@ var data = {
         email: "node@test.com",
         password: "password",
     }
-user.add(data);
+
+var result = user.add(data);
+console.log(result)
