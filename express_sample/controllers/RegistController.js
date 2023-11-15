@@ -11,9 +11,10 @@ exports.add = async (req, res) => {
 
     //DB登録
     var user = new User();
-    await user.add(req.body)
+    var newUser = await user.add(req.body)
 
-    if (user.id) {
+    //TODO: bug
+    if (newUser.id) {
         res.redirect('/login')
     } else {
         res.redirect('/regist')
