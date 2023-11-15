@@ -25,12 +25,11 @@ class User {
     }
     auth = async (email, password) => {
         try {
-            const con = await mysql.createConnection(db.info);
             //SQL実行(email 検索)
             var sql = `SELECT * FROM users WHERE ?;`
+            const con = await mysql.createConnection(db.info);
             const[rows, fields] = await con.query(sql, { email: email });
-            user = rows[0];
-            console.log(rows)
+            var user = rows[0];
             //パスワードのハッシュ検証
             if (user && bcrypt.compareSync(password, user.password)) {
                 return user;
