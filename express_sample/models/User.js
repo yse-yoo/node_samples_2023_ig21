@@ -15,7 +15,6 @@ class User {
             con.end();
         } catch (error) {
 
-        } finally {
         }
         return result;
     }
