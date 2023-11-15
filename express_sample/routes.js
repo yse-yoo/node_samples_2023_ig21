@@ -11,7 +11,7 @@ const UserController = require('./controllers/UserController')
 const RegistController = require('./controllers/RegistController')
 
 // Regist 
-router.get('/regsit', RegistController.index)
+router.get('/regist', RegistController.index)
 router.post('/regist/add', RegistController.add)
 
 // Home
