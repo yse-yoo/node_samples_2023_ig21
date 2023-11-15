@@ -1,25 +1,15 @@
-//Modelモジュール読み込み
-const Model = require('./Model')
+//mysql2/promiseモジュール読み込み
+const mysql = require('mysql2/promise')
+const db = require('../lib/db')
 
-//Modelクラスを継承
-class User extends Model {
-    dataFile = "./data/users.json"
+class User {
+    //ユーザ追加（非同期処理）
+    add = async (post) => {
 
-    /**
-     * 認証用のメソッド
-     * @param string email 
-     * @param string password 
-     * @return array
-     */
-    auth = (email, password) => {
-        //email と passswordが一致したらユーザを返す
-        // TODO：データベースに接続してユーザ取得
-        // TODO：パスワードはハッシュ値でチェック
-        return this.get().find((value) => 
-            (value.email == email && value.password == password)
-        );
     }
+    auth = (email, password) => {
 
+    }
 }
 
 //モジュール化

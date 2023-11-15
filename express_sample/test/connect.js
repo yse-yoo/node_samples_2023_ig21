@@ -17,3 +17,5 @@ con.connect((error) => {
 });
 // MySQL接続終了
 con.end();
+
+// node test/connect でこのプログラムを実行
