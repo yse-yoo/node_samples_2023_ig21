@@ -1,0 +1,21 @@
+<div class="mt-3">
+    <form class="row" action="../tweet/add.php" method="post">
+        <textarea class="form-control" name="message" id="" placeholder="いまどうしてる"></textarea>
+        <button class="w-100 mt-2 btn btn-primary ">投稿する</button>
+    </form>
+</div>
+<div class="tweet-contents">
+    <div>
+        <div class="tweet-body">
+            <div class="tweet d-flex">
+                <div class="tweet-body">
+                    <% tweets.forEach((tweet)=> { %>
+                    <div class="tweet-text mt-2 mb-2">
+                    <%= tweet.message %>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

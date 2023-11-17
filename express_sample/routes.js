@@ -9,6 +9,11 @@ const ItemController = require('./controllers/ItemController')
 const LoginController = require('./controllers/LoginController')
 const UserController = require('./controllers/UserController')
 const RegistController = require('./controllers/RegistController')
+const TweetController = require('./controllers/TweetController')
+
+// tweet 
+router.get('/tweet', TweetController.index)
+router.post('/tweet/add', TweetController.add)
 
 // Regist 
 router.get('/regist', RegistController.index)
